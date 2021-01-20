@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Timilehin Jegede\'s Portfolio',
+      title: 'Timilehin Jegede',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.purple,
@@ -26,7 +26,7 @@ class MyHomePage extends StatelessWidget {
       backgroundColor: Colors.purple,
       appBar: AppBar(
         title: Text(
-          'Timilehin Jegede\'s Portfolio',
+          'Timilehin Jegede',
         ),
         centerTitle: true,
         leading: Icon(Icons.menu_rounded),
