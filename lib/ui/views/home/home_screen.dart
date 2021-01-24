@@ -115,6 +115,7 @@ class _SocialsSection extends StatelessWidget {
     return Wrap(
       alignment: WrapAlignment.center,
       spacing: 20.0,
+      runSpacing: 10.0,
       children: [
         ...List.generate(
           Social.socialsList.length,
