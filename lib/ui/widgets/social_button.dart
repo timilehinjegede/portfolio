@@ -12,7 +12,7 @@ class SocialButton extends StatefulWidget {
 }
 
 class _SocialButtonState extends State<SocialButton> {
-  double _radius = 40;
+  double _radius = 35;
   Color _buttonColor = blackColor;
   bool _isHovering = false;
 
