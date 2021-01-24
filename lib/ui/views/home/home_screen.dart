@@ -10,19 +10,22 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: blackColor,
       body: SizedBox.expand(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: hPaddingValue),
+          padding: const EdgeInsets.symmetric(
+            horizontal: hPaddingValue,
+            vertical: vPaddingValue,
+          ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              PortfolioTradeMark(),
               Spacer(),
               _AboutSection(),
               SizedBox(
                 height: 40,
               ),
-              Expanded(
-                child: _SocialsSection(),
-              ),
+              _SocialsSection(),
+              Spacer(),
             ],
           ),
         ),
