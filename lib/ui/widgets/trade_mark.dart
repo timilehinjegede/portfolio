@@ -18,13 +18,16 @@ class PortfolioTradeMark extends StatelessWidget {
         SizedBox(
           width: 5,
         ),
-        SizedBox(
-          height: 8,
-          width: 8,
-          child: DecoratedBox(
-            decoration: BoxDecoration(
-              color: whiteColor,
-              shape: BoxShape.circle,
+        Padding(
+          padding: const EdgeInsets.only(bottom: 4),
+          child: SizedBox(
+            height: 8,
+            width: 8,
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                color: whiteColor,
+                shape: BoxShape.circle,
+              ),
             ),
           ),
         ),

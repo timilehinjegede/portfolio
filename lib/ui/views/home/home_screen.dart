@@ -8,27 +8,29 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: blackColor,
-      body: SizedBox.expand(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: hPaddingValue,
-            vertical: vPaddingValue,
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              PortfolioTradeMark(),
-              Spacer(),
-              _AboutSection(),
-              SizedBox(
-                height: 40,
+      body: CustomScrollView(
+        slivers: [
+          SliverFillRemaining(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: hPaddingValue,
+                vertical: vPaddingValue,
               ),
-              _SocialsSection(),
-              Spacer(),
-            ],
+              child: Column(
+                children: [
+                  PortfolioTradeMark(),
+                  Spacer(),
+                  _AboutSection(),
+                  SizedBox(
+                    height: 40,
+                  ),
+                  _SocialsSection(),
+                  Spacer(),
+                ],
+              ),
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
@@ -51,59 +53,54 @@ class _AboutSection extends StatelessWidget {
         SizedBox(
           height: 25,
         ),
-        Wrap(
-          alignment: WrapAlignment.center,
-          spacing: 5.0,
-          direction: Axis.vertical,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Row(
-              children: [
-                SizedBox(
-                  height: 8,
-                  width: 8,
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      color: whiteColor,
-                      shape: BoxShape.circle,
-                    ),
-                  ),
+            SizedBox(
+              height: 8,
+              width: 8,
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  color: whiteColor,
+                  shape: BoxShape.circle,
                 ),
-                SizedBox(
-                  width: 5,
-                ),
-                Text(
-                  roleOne,
-                  style: Theme.of(context).textTheme.subtitle1.copyWith(
-                        color: whiteColor,
-                      ),
-                ),
-              ],
+              ),
             ),
             SizedBox(
-              width: 10,
+              width: 8,
             ),
-            Row(
-              children: [
-                SizedBox(
-                  height: 8,
-                  width: 8,
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      color: whiteColor,
-                      shape: BoxShape.circle,
-                    ),
+            Text(
+              roleOne,
+              style: Theme.of(context).textTheme.subtitle1.copyWith(
+                    color: whiteColor,
                   ),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: 8,
+              width: 8,
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  color: whiteColor,
+                  shape: BoxShape.circle,
                 ),
-                SizedBox(
-                  width: 5,
-                ),
-                Text(
-                  roleTwo,
-                  style: Theme.of(context).textTheme.subtitle1.copyWith(
-                        color: whiteColor,
-                      ),
-                ),
-              ],
+              ),
+            ),
+            SizedBox(
+              width: 8,
+            ),
+            Text(
+              roleTwo,
+              style: Theme.of(context).textTheme.subtitle1.copyWith(
+                    color: whiteColor,
+                  ),
             ),
           ],
         ),
