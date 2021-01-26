@@ -12,7 +12,6 @@ class SocialButton extends StatefulWidget {
 }
 
 class _SocialButtonState extends State<SocialButton> {
-  double _radius = 40;
   Color _buttonColor = blackColor;
   bool _isHovering = false;
 
@@ -21,32 +20,31 @@ class _SocialButtonState extends State<SocialButton> {
     return Tooltip(
       message: widget.social.name,
       child: InkWell(
-        borderRadius: BorderRadius.all(Radius.circular(20.0)),
         onHover: (bool value) {
           setState(() {
             _isHovering = value;
-            _radius = _isHovering ? 40 : 35;
             _buttonColor = _isHovering ? whiteColor : blackColor;
           });
         },
-        onTap: () {},
+        borderRadius: BorderRadius.circular(buttonRadius),
+        onTap: () => launchUrl(url: widget.social.url),
         child: AnimatedContainer(
           duration: Duration(milliseconds: 200),
-          height: _radius * 2,
-          width: _radius * 2,
+          height: buttonRadius * 2,
+          width: buttonRadius * 2,
           decoration: BoxDecoration(
             color: _buttonColor,
             border: Border.all(
               color: whiteColor,
               width: 1.5,
             ),
-            shape: BoxShape.circle,
+            borderRadius: BorderRadius.circular(buttonRadius),
           ),
           child: Center(
             child: Image.asset(
               widget.social.assetSrc,
-              height: _radius,
-              width: _radius,
+              height: buttonRadius,
+              width: buttonRadius,
               fit: BoxFit.cover,
               color: _isHovering ? blackColor : whiteColor,
             ),
