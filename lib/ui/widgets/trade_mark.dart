@@ -13,11 +13,10 @@ class PortfolioTradeMark extends StatelessWidget {
             fontSize: 20,
             fontWeight: FontWeight.w800,
             color: whiteColor,
+            letterSpacing: 1.5,
           ),
         ),
-        SizedBox(
-          width: 5,
-        ),
+        const XBox(2),
         Padding(
           padding: const EdgeInsets.only(bottom: 4),
           child: SizedBox(

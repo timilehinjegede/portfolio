@@ -12,8 +12,10 @@ class HomeScreen extends StatelessWidget {
         slivers: [
           SliverFillRemaining(
             child: Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: hPaddingValue,
+              padding: EdgeInsets.symmetric(
+                horizontal: ResponsiveUtil.isMobile(context)
+                    ? hPaddingValue / 3
+                    : hPaddingValue,
                 vertical: vPaddingValue,
               ),
               child: Column(
@@ -21,9 +23,7 @@ class HomeScreen extends StatelessWidget {
                   PortfolioTradeMark(),
                   Spacer(),
                   _AboutSection(),
-                  SizedBox(
-                    height: 40,
-                  ),
+                  const YBox(40),
                   _SocialsSection(),
                   Spacer(),
                 ],
@@ -50,9 +50,7 @@ class _AboutSection extends StatelessWidget {
               ),
           textAlign: TextAlign.center,
         ),
-        SizedBox(
-          height: 25,
-        ),
+        const YBox(25),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -66,9 +64,7 @@ class _AboutSection extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
-              width: 8,
-            ),
+            const XBox(8),
             Text(
               roleOne,
               style: Theme.of(context).textTheme.subtitle1.copyWith(
@@ -77,9 +73,7 @@ class _AboutSection extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(
-          height: 10,
-        ),
+        const YBox(10),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -93,9 +87,7 @@ class _AboutSection extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
-              width: 8,
-            ),
+            const XBox(8),
             Text(
               roleTwo,
               style: Theme.of(context).textTheme.subtitle1.copyWith(
