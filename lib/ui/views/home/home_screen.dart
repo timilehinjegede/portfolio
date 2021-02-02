@@ -20,7 +20,27 @@ class HomeScreen extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  PortfolioTradeMark(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      PortfolioTradeMark(),
+                      FlatButton(
+                        height: 45,
+                        onPressed: () {
+                          launchUrl(url: resumeUrl);
+                        },
+                        color: yellowColor,
+                        textColor: whiteColor,
+                        child: Text(
+                          viewResume,
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                   Spacer(),
                   _AboutSection(),
                   const YBox(40),
