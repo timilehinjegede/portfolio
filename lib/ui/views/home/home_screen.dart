@@ -3,6 +3,9 @@ import 'package:portfolio/core/models/models.dart';
 import 'package:portfolio/ui/widgets/widgets.dart';
 import 'package:portfolio/utils/utils.dart';
 
+import '../../../utils/theme.dart';
+import '../../../utils/theme.dart';
+
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -25,12 +28,12 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       PortfolioTradeMark(),
                       FlatButton(
-                        height: 45,
+                        height: 40,
                         onPressed: () {
                           launchUrl(url: resumeUrl);
                         },
-                        color: yellowColor,
                         textColor: whiteColor,
+                        color: yellowColor,
                         child: Text(
                           viewResume,
                           style: TextStyle(
