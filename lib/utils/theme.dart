@@ -9,6 +9,7 @@ const Color lightYellowColor = Color(0xffF8D64F);
 
 // theme
 ThemeData themeData = ThemeData(
-  primaryColor: blackColor,
-  accentColor: yellowColor,
-);
+    primaryColor: yellowColor,
+    accentColor: yellowColor,
+    primaryColorLight: lightYellowColor,
+    primaryColorDark: deepYellowColor);

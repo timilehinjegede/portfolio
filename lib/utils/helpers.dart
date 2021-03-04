@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -91,7 +93,7 @@ void launchUrl({@required String url}) async {
   if (await canLaunch(url)) {
     await launch(url);
   } else {
-    // show snackBar => cannot open the url
+    log('unable to launch url');
   }
 }
 
