@@ -9,5 +9,7 @@ const Color lightYellowColor = Color(0xffF8D64F);
 
 // theme
 ThemeData themeData = ThemeData(
-  primarySwatch: Colors.purple,
-);
+    primaryColor: yellowColor,
+    accentColor: yellowColor,
+    primaryColorLight: lightYellowColor,
+    primaryColorDark: deepYellowColor);
