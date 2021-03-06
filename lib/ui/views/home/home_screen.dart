@@ -62,6 +62,16 @@ class _AboutSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+        Container(
+          height: 150,
+          width: 150,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(avatar),
+            ),
+          ),
+        ),
+        const YBox(30),
         Text(
           name,
           style: Theme.of(context).textTheme.headline3.copyWith(
