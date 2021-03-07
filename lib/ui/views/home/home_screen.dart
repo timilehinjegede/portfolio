@@ -63,8 +63,8 @@ class _AboutSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
-          height: 150,
-          width: 150,
+          height: ResponsiveUtil.isMobile(context) ? 120 : 150,
+          width: ResponsiveUtil.isMobile(context) ? 120 : 150,
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage(avatar),
