@@ -37,7 +37,7 @@ class Social {
     Social(
       name: 'Gmail',
       assetSrc: gMailAsset,
-      url: getEmailLink(emailAddress: 'timilehintimothy.jegede@gmail.com'),
+      url: getEmailLink(emailAddress: 'hello@timilehinjegede.com'),
     ),
   ];
 }

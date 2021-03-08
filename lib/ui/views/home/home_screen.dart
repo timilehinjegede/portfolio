@@ -8,49 +8,42 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: blackColor,
-      body: CustomScrollView(
-        slivers: [
-          SliverFillRemaining(
-            child: Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: ResponsiveUtil.isMobile(context)
-                    ? hPaddingValue / 3
-                    : hPaddingValue,
-                vertical: vPaddingValue,
-              ),
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      PortfolioTradeMark(),
-                      FlatButton(
-                        height: 40,
-                        onPressed: () {
-                          launchUrl(url: resumeUrl);
-                        },
-                        textColor: whiteColor,
-                        color: yellowColor,
-                        child: Text(
-                          viewResume,
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                      ),
-                    ],
+      body: Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: ResponsiveUtil.isMobile(context)
+              ? hPaddingValue / 3
+              : hPaddingValue,
+          vertical: vPaddingValue,
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                PortfolioTradeMark(),
+                FlatButton(
+                  height: 40,
+                  onPressed: () {
+                    launchUrl(url: resumeUrl);
+                  },
+                  textColor: whiteColor,
+                  color: yellowColor,
+                  child: Text(
+                    viewResume,
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
-                  Spacer(),
-                  _AboutSection(),
-                  const YBox(40),
-                  _SocialsSection(),
-                  Spacer(),
-                ],
-              ),
+                ),
+              ],
             ),
-          ),
-        ],
+            _AboutSection(),
+            _SocialsSection(),
+          ],
+        ),
       ),
     );
   }

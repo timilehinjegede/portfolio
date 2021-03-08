@@ -7,7 +7,9 @@ import 'package:url_launcher/url_launcher.dart';
 const double hPaddingValue = 90;
 const double vPaddingValue = 30;
 const double buttonRadius = 35;
+const double mButtonRadius = 25;
 
+// TODO:(timilehinjegede): rewrite responsiveness class
 // ===== responsiveness =====
 class ResponsiveUtil extends StatelessWidget {
   final Widget mobileWidget;
@@ -101,7 +103,6 @@ String getEmailLink({@required emailAddress}) {
   final Uri _emailLaunchUri = Uri(
     scheme: 'mailto',
     path: emailAddress,
-    // TODO(timilehinjegede): add subject and body of email
     // queryParameters: {'TODO: Add Subject': 'TODO: Add body'},
   );
   return _emailLaunchUri.toString();

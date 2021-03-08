@@ -30,8 +30,12 @@ class _SocialButtonState extends State<SocialButton> {
         onTap: () => launchUrl(url: widget.social.url),
         child: AnimatedContainer(
           duration: Duration(milliseconds: 200),
-          height: buttonRadius * 2,
-          width: buttonRadius * 2,
+          height: ResponsiveUtil.isMobile(context)
+              ? mButtonRadius * 2
+              : buttonRadius * 2,
+          width: ResponsiveUtil.isMobile(context)
+              ? mButtonRadius * 2
+              : buttonRadius * 2,
           decoration: BoxDecoration(
             color: _buttonColor,
             border: Border.all(
@@ -43,8 +47,12 @@ class _SocialButtonState extends State<SocialButton> {
           child: Center(
             child: Image.asset(
               widget.social.assetSrc,
-              height: buttonRadius,
-              width: buttonRadius,
+              height: ResponsiveUtil.isMobile(context)
+                  ? mButtonRadius
+                  : buttonRadius,
+              width: ResponsiveUtil.isMobile(context)
+                  ? mButtonRadius
+                  : buttonRadius,
               fit: BoxFit.cover,
               color: _isHovering ? blackColor : whiteColor,
             ),
