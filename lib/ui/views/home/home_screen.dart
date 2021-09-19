@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget {
                 FlatButton(
                   height: 40,
                   onPressed: () {
-                    launchUrl(url: resumeUrl);
+                    launchUrl(url: resumeUrl_v2);
                   },
                   textColor: whiteColor,
                   color: yellowColor,
