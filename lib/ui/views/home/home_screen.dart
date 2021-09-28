@@ -119,6 +119,34 @@ class _AboutSection extends StatelessWidget {
             ),
           ],
         ),
+        const YBox(30),
+        FlatButton(
+          height: 50,
+          onPressed: () {
+            launchUrl(url: projectsUrl);
+          },
+          textColor: whiteColor,
+          color: yellowColor,
+          padding: EdgeInsets.symmetric(horizontal: 25),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                viewMyWorks,
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              const XBox(10),
+              Icon(
+                Icons.arrow_forward_rounded,
+                color: whiteColor,
+                size: 18,
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }
