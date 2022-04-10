@@ -12,6 +12,8 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
+
+  # launching url within the web application
   url_launcher: ^5.7.10
   url_launcher_web: ^0.1.5+1
 
@@ -27,6 +29,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/logos/
+    - assets/images/preview/
 
   # fonts:
   #   - family: Schyler

@@ -13,25 +13,25 @@ class Social {
     Social(
       name: 'Github',
       assetSrc: githubAsset,
-      url: 'https://github.com/timilehinjegede',
+      url: githubUrl,
     ),
     // Twitter
     Social(
       name: 'Twitter',
       assetSrc: twitterAsset,
-      url: 'https://twitter.com/timilehinjegede',
+      url: twitterUrl,
     ),
     // Stackoverflow
     Social(
       name: 'StackOverflow',
       assetSrc: stackOverflowAsset,
-      url: 'https://stackoverflow.com/users/13452640/pablito?tab=profile',
+      url: stackOverflowUrl,
     ),
     // Linkedln
     Social(
       name: 'Linkedln',
       assetSrc: linkedInAsset,
-      url: 'https://www.linkedin.com/in/timilehinjegede/',
+      url: linkedlnUrl,
     ),
     // Gmail
     Social(
