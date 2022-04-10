@@ -10,6 +10,7 @@ const String resumeUrl = 'https://docs.google.com/document/d/1lGY1BzIwcfHr_GQ5Rx
 const String resumeUrl_v2 = 'https://docs.google.com/document/d/1XGHYJ-nhEsmoWPTxWMaHyat_MmU9Qaan2F6SDUgc_J8/edit?usp=sharing';
 
 const String resumeUrlV2 = 'https://docs.google.com/document/d/1CdWGrmaleLWEiv1agHB4MBoDuSRSo9w3U2F3ccQp9js/edit?usp=sharing';
+const String resumeUrlV3 = 'https://docs.google.com/document/d/1si5Xswnzvyk-Zfm2sayG3_KzpzUxaQQbn2GO_XHQd4M/edit?usp=sharing';
 
 // notion projects page
 const String projectsUrl = 'https://cosmic-methane-022.notion.site/My-Works-8f9a7906ae3947e89e3328090ece061a';
