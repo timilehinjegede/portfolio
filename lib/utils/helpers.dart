@@ -12,15 +12,15 @@ const double mButtonRadius = 25;
 // TODO:(timilehinjegede): rewrite responsiveness class
 // ===== responsiveness =====
 class ResponsiveUtil extends StatelessWidget {
-  final Widget mobileWidget;
-  final Widget tabletWidget;
-  final Widget desktopWidget;
-
   ResponsiveUtil({
     this.mobileWidget,
     this.tabletWidget,
     this.desktopWidget,
   });
+
+  final Widget mobileWidget;
+  final Widget tabletWidget;
+  final Widget desktopWidget;
 
   static bool isMobile(context) =>
       MediaQuery.of(context).size.shortestSide < 600;
@@ -78,9 +78,10 @@ class XBox extends StatelessWidget {
 }
 
 class YBox extends StatelessWidget {
-  final double _height;
-
+  // ignore: use_key_in_widget_constructors
   const YBox(this._height);
+
+  final double _height;
 
   @override
   Widget build(BuildContext context) {
@@ -91,7 +92,7 @@ class YBox extends StatelessWidget {
 }
 
 // ===== method utils =====
-void launchUrl({@required String url}) async {
+Future<void> launchUrl({@required String url}) async {
   if (await canLaunch(url)) {
     await launch(url);
   } else {
@@ -100,7 +101,7 @@ void launchUrl({@required String url}) async {
 }
 
 String getEmailLink({@required emailAddress}) {
-  final Uri _emailLaunchUri = Uri(
+  final _emailLaunchUri = Uri(
     scheme: 'mailto',
     path: emailAddress,
     // queryParameters: {'TODO: Add Subject': 'TODO: Add body'},

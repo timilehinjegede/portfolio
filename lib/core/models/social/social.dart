@@ -2,11 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/utils/utils.dart';
 
 class Social {
+  Social({
+    @required this.name,
+    @required this.assetSrc,
+    @required this.url,
+  });
+
   final String name;
   final String assetSrc;
   final String url;
-
-  Social({@required this.name, @required this.assetSrc, @required this.url});
 
   static List<Social> socialsList = [
     // Github

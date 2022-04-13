@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/utils/utils.dart';
 
 class PortfolioTradeMark extends StatelessWidget {
+  const PortfolioTradeMark({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.end,
-      children: [
+      children: const [
         Text(
           'Tim',
           style: TextStyle(
@@ -16,9 +18,9 @@ class PortfolioTradeMark extends StatelessWidget {
             letterSpacing: 1.5,
           ),
         ),
-        const XBox(2),
+        XBox(2),
         Padding(
-          padding: const EdgeInsets.only(bottom: 4),
+          padding: EdgeInsets.only(bottom: 4),
           child: SizedBox(
             height: 8,
             width: 8,

@@ -3,9 +3,9 @@ import 'package:portfolio/core/models/models.dart';
 import 'package:portfolio/utils/utils.dart';
 
 class SocialButton extends StatefulWidget {
-  final Social social;
-
   const SocialButton({Key key, @required this.social}) : super(key: key);
+
+  final Social social;
 
   @override
   _SocialButtonState createState() => _SocialButtonState();
@@ -29,7 +29,7 @@ class _SocialButtonState extends State<SocialButton> {
         borderRadius: BorderRadius.circular(buttonRadius),
         onTap: () => launchUrl(url: widget.social.url),
         child: AnimatedContainer(
-          duration: Duration(milliseconds: 200),
+          duration: const Duration(milliseconds: 200),
           height: ResponsiveUtil.isMobile(context)
               ? mButtonRadius * 2
               : buttonRadius * 2,

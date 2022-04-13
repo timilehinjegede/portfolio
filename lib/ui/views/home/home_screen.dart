@@ -1,9 +1,13 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/models/models.dart';
 import 'package:portfolio/ui/widgets/widgets.dart';
 import 'package:portfolio/utils/utils.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,13 +20,12 @@ class HomeScreen extends StatelessWidget {
           vertical: vPaddingValue,
         ),
         child: Column(
-          mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                PortfolioTradeMark(),
+                const PortfolioTradeMark(),
                 FlatButton(
                   height: 40,
                   onPressed: () {
@@ -30,7 +33,7 @@ class HomeScreen extends StatelessWidget {
                   },
                   textColor: whiteColor,
                   color: yellowColor,
-                  child: Text(
+                  child: const Text(
                     viewResume,
                     style: TextStyle(
                       fontSize: 12,
@@ -53,12 +56,11 @@ class _AboutSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
           height: ResponsiveUtil.isMobile(context) ? 120 : 150,
           width: ResponsiveUtil.isMobile(context) ? 120 : 150,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(avatar),
             ),
@@ -77,7 +79,7 @@ class _AboutSection extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 8,
               width: 8,
               child: DecoratedBox(
@@ -100,7 +102,7 @@ class _AboutSection extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 8,
               width: 8,
               child: DecoratedBox(
@@ -127,10 +129,10 @@ class _AboutSection extends StatelessWidget {
           },
           textColor: whiteColor,
           color: yellowColor,
-          padding: EdgeInsets.symmetric(horizontal: 25),
+          padding: const EdgeInsets.symmetric(horizontal: 25),
           child: Row(
             mainAxisSize: MainAxisSize.min,
-            children: [
+            children: const [
               Text(
                 viewMyWorks,
                 style: TextStyle(
@@ -138,7 +140,7 @@ class _AboutSection extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                 ),
               ),
-              const XBox(10),
+              XBox(10),
               Icon(
                 Icons.arrow_forward_rounded,
                 color: whiteColor,
@@ -157,8 +159,8 @@ class _SocialsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Wrap(
       alignment: WrapAlignment.center,
-      spacing: 20.0,
-      runSpacing: 10.0,
+      spacing: 20,
+      runSpacing: 10,
       children: [
         ...List.generate(
           Social.socialsList.length,

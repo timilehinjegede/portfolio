@@ -23,11 +23,19 @@ dependencies:
   # state management
   flutter_riverpod: ^1.0.3
 
+  # netowork requests
+  dio: ^4.0.6
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
   integration_test:
     sdk: flutter
+  
+  # linting and static analysis
+  flutter_lints: ^1.0.0
+
 
 flutter:
   uses-material-design: true
