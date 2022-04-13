@@ -17,6 +17,12 @@ dependencies:
   url_launcher: ^5.7.10
   url_launcher_web: ^0.1.5+1
 
+  # declarative routing 
+  go_router: ^3.0.7
+
+  # state management
+  flutter_riverpod: ^1.0.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -27,9 +33,10 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/
-    - assets/images/logos/
-    - assets/images/preview/
+    - assets/images/pngs/
+    - assets/images/pngs/logos/
+    - assets/images/pngs/preview/
+    - assets/images/svgs/
 
   # fonts:
   #   - family: Schyler
