@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/modules/home/views/home_view.dart';
 import 'package:portfolio/shared/navigation/router.dart';
 import 'package:portfolio/shared/utils/theme.dart';
 
