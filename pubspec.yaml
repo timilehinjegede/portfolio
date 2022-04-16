@@ -5,7 +5,7 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.16.2 <3.0.0"
 
 dependencies:
   flutter:
@@ -13,23 +13,42 @@ dependencies:
 
   cupertino_icons: ^1.0.2
 
-  # launching url within the web application
-  url_launcher: ^5.7.10
-  url_launcher_web: ^0.1.5+1
+  # launching urls
+  url_launcher: ^6.0.20
+
+  # declarative routing 
+  go_router: ^3.0.7
+
+  # state management
+  flutter_riverpod: ^1.0.3
+
+  # netowork requests
+  dio: ^4.0.6
+
+  # responsive layout
+  responsive_builder: ^0.4.2
+
+  # responsive text widgets
+  auto_size_text: ^3.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
   integration_test:
     sdk: flutter
+  
+  # linting and static analysis
+  flutter_lints: ^1.0.0
+
 
 flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/
-    - assets/images/logos/
-    - assets/images/preview/
+    - assets/images/pngs/
+    - assets/images/pngs/logos/
+    - assets/images/svgs/
 
   # fonts:
   #   - family: Schyler

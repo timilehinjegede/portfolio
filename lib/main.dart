@@ -1,20 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/ui/views/home/home_screen.dart';
-import 'package:portfolio/utils/utils.dart';
+import 'package:portfolio/shared/navigation/router.dart';
+import 'package:portfolio/shared/utils/theme.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    const MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({
+    Key? key,
+  }) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Timilehin Jegede',
-      theme: themeData,
+      theme: appTheme,
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      routeInformationParser: goRouter.routeInformationParser,
+      routerDelegate: goRouter.routerDelegate,
     );
   }
 }
