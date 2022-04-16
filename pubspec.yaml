@@ -13,9 +13,8 @@ dependencies:
 
   cupertino_icons: ^1.0.2
 
-  # launching url within the web application
-  url_launcher: ^5.7.10
-  url_launcher_web: ^0.1.5+1
+  # launching urls
+  url_launcher: ^6.0.20
 
   # declarative routing 
   go_router: ^3.0.7
