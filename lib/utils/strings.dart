@@ -9,6 +9,7 @@ const String viewMyWorks = 'View My Works';
 const String resumeUrl = 'https://docs.google.com/document/d/1lGY1BzIwcfHr_GQ5RxLREbBLE4D5UPKicwVDz3MzGhE/edit?usp=sharing';
 const String resumeUrl_v2 = 'https://docs.google.com/document/d/1XGHYJ-nhEsmoWPTxWMaHyat_MmU9Qaan2F6SDUgc_J8/edit?usp=sharing';
 
+
 const String resumeUrlV2 = 'https://docs.google.com/document/d/1CdWGrmaleLWEiv1agHB4MBoDuSRSo9w3U2F3ccQp9js/edit?usp=sharing';
 const String resumeUrlV3 = 'https://docs.google.com/document/d/1WawEpJd2CwhqA1_gSqIkWaEkdUoBOWaZ/edit?usp=sharing';
 
