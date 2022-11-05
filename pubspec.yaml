@@ -22,7 +22,7 @@ dependencies:
   # state management
   flutter_riverpod: ^1.0.3
 
-  # netowork requests
+  # network requests
   dio: ^4.0.6
 
   # responsive layout

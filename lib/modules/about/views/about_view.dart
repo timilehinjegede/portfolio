@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
-class HomeMobileView extends StatelessWidget {
-  const HomeMobileView({Key? key}) : super(key: key);
+class AboutView extends StatelessWidget {
+  const AboutView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text('This is for mobile'),
+        child: Text(
+          'Contact View',
+        ),
       ),
     );
   }
