@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/shared/utils/utils.dart';
+import 'package:portfolio/shared/widgets/widgets.dart';
 
-class ContactMobileView extends StatelessWidget {
-  const ContactMobileView({Key? key}) : super(key: key);
+class AboutMobileView extends StatelessWidget {
+  const AboutMobileView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return SingleChildScrollView(
       padding: EdgeInsets.symmetric(
         horizontal: hPadding.dx,
         vertical: vPadding.dy,
       ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Text(
-                '03.',
+                '01.',
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
@@ -30,7 +30,7 @@ class ContactMobileView extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      'Contact',
+                      'About me',
                       style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.w500,
@@ -46,20 +46,29 @@ class ContactMobileView extends StatelessWidget {
             ],
           ),
           YBox(40.dx),
-          Text(
-            'Let’s build your project.',
-            style: TextStyle(
-              fontSize: 22.sp,
+          Container(
+            height: 160.dy,
+            width: 160.dx,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: appColors.white,
             ),
+          ),
+          YBox(20.dx),
+          Text(
+            'Lorem ipsumeLorem ipsumeLorem ipsume Lorem ipsumevLorem ipsume Lorem ipsumeLorem ipsume Lorem ipsume' *
+                2,
           ),
           YBox(30.dy),
           Text(
-            'I am currently open to opportunities, I would love to learn more about what you are building and how I can come in!',
-            style: TextStyle(
-              fontSize: 20.sp,
-              fontWeight: FontWeight.w300,
-            ),
-            textAlign: TextAlign.center,
+            'Lorem ipsumeLorem ipsumeLorem ipsume Lorem ipsumevLorem ipsume Lorem ipsumeLorem ipsume Lorem ipsume',
+          ),
+          YBox(30.dy),
+          ...List.generate(
+            5,
+            (index) {
+              return SkillHighlightWidget();
+            },
           ),
           YBox(40.dy),
           Container(
@@ -69,23 +78,7 @@ class ContactMobileView extends StatelessWidget {
             ),
             padding: EdgeInsets.symmetric(horizontal: 20.dx, vertical: 15.dy),
             child: Text(
-              'Say Hello',
-              style: TextStyle(
-                fontSize: 18.sp,
-                fontWeight: FontWeight.w700,
-                color: appColors.white,
-              ),
-            ),
-          ),
-          YBox(40.dy),
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: appColors.darkerPrimary,
-            ),
-            padding: EdgeInsets.symmetric(horizontal: 20.dx, vertical: 15.dy),
-            child: Text(
-              'Back to home ->',
+              'View my resume ->',
               style: TextStyle(
                 fontSize: 18.sp,
                 fontWeight: FontWeight.w700,

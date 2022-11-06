@@ -3,16 +3,17 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 // constant values
 const double padding = 15;
-const double hPadding = 20;
+const double hPadding = 15;
 const double vPadding = 20;
 
 class Dims {
   const Dims._();
   // the app was designed on an iphone frame with w:h = 360:800
-  static Size designSize = const Size(360, 800);
+  static Size designSize = const Size(393, 852);
   // the device [running the application] size
   static late Size deviceSize;
 
@@ -79,16 +80,14 @@ class Dims {
   }
 }
 
-extension DimsExtensionOld on BuildContext {
-  @Deprecated('Use [Dims.deviceSize]')
-  Size get mediaQuerySize => MediaQuery.of(this).size;
-  @Deprecated('Use [this.dxPercent]')
-  double deviceWidth([double extent = 1]) => mediaQuerySize.width * extent;
-  @Deprecated('Use [this.dyPercent]')
-  double deviceHeight([double extent = 1]) => mediaQuerySize.height * extent;
-  Orientation get deviceOrientation => MediaQuery.of(this).orientation;
-  bool get isLandscape => deviceOrientation == Orientation.landscape;
-  bool get isPortrait => deviceOrientation == Orientation.portrait;
+extension ContextExtensions on BuildContext {
+  DeviceScreenType get deviceScreenType => getDeviceType(
+        MediaQuery.of(this).size,
+      );
+
+  bool get isMobile => deviceScreenType == DeviceScreenType.mobile;
+  bool get isTablet => deviceScreenType == DeviceScreenType.tablet;
+  bool get isDesktop => deviceScreenType == DeviceScreenType.desktop;
 }
 
 extension DimsExtension on num {
