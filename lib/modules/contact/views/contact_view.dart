@@ -10,10 +10,7 @@ class ContactView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
       mobile: ContactMobileView(),
-      tablet: Center(
-        child: Text('This is for tablet'),
-      ),
-      desktop: ContactDesktopView(),
+      tablet: ContactDesktopView(),
     );
   }
 }
