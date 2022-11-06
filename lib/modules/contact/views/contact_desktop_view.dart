@@ -38,7 +38,7 @@ class ContactDesktopView extends StatelessWidget {
                     ),
                     XBox(10.dx),
                     Flexible(
-                      child: Divider(),
+                    child: Divider(),
                     ),
                   ],
                 ),
