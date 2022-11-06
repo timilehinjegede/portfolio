@@ -9,12 +9,15 @@ final ThemeData appTheme = baseTheme.copyWith(
   backgroundColor: appColors.black.withOpacity(.5),
   primaryColor: appColors.primary,
   appBarTheme: baseTheme.appBarTheme.copyWith(
-    backgroundColor: appColors.white,
+    backgroundColor: appColors.primary,
     elevation: 0,
-    foregroundColor: appColors.primary,
-  ),
-  colorScheme: baseTheme.colorScheme.copyWith(
-    secondary: appColors.primary,
+    foregroundColor: appColors.white,
+    titleTextStyle: TextStyle(
+      color: appColors.white,
+    ),
+    toolbarTextStyle: TextStyle(
+      color: appColors.white,
+    ),
   ),
   dividerColor: appColors.grey,
   brightness: Brightness.light,

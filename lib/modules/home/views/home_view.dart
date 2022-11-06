@@ -8,14 +8,12 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ScreenTypeLayout(
-        mobile: HomeMobileView(),
-        tablet: Center(
-          child: Text('This is for tablet'),
-        ),
-        desktop: HomeDesktopView(),
+    return ScreenTypeLayout(
+      mobile: HomeMobileView(),
+      tablet: Center(
+        child: Text('This is for tablet'),
       ),
+      desktop: HomeDesktopView(),
     );
   }
 }
